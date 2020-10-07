@@ -1,0 +1,16 @@
+API Server Setup
+----------------
+npm init
+npm i express --save
+npm i @babel/core @babel/node @babel/preset-env --save-dev
+code .babelrc
+add this to that file
+{
+  "presets": [
+    "@babel/preset-env"
+  ]
+}
+npm i nodemon --save-dev
+edit package.json and add the following to scripts:
+"start": "nodemon --exec babel-node ./server.js"
+npm i dotenv --save
