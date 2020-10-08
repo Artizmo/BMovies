@@ -1,18 +1,25 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import moviesRoutes from './routes/moviesRoutes';
+import routes from './routes';
 const app = express();
 dotenv.config();
 
-app.use('/movies', moviesRoutes);
+app.use('/api', routes);
 
-app.get('/', (req, res) => {
-  res.send('Main').status(200);
+app.use(['/api', '/api*'], (req, res) => {
+  res
+    .status(404)
+    .json({
+      message: 'No resources available',
+      status: 404
+    })
 });
 
-app.get('/*', (req, res) => {
-  console.log('bingo');
-  res.redirect(301, '/');
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Looks good!',
+    status: 200
+  })
 });
 
 app.listen(process.env.PORT);
