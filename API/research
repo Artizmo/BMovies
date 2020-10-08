@@ -14,3 +14,15 @@ npm i nodemon --save-dev
 edit package.json and add the following to scripts:
 "start": "nodemon --exec babel-node ./server.js"
 npm i dotenv --save
+npm i eslint eslint-config-airbnb-base eslint-plugin-import --save-dev
+code .eslintrc file // this can have whatever you want for linting rules
+{  
+  "extends": "airbnb",
+  "root": true,
+  "parser": "babel-eslint",
+  "rules": {
+    "eol-last": ["error", "always"],
+    "no-trailing-spaces": 1,
+    "linebreak-style": 0
+  }
+}
