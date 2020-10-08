@@ -17,7 +17,7 @@ npm i dotenv --save
 npm i eslint eslint-config-airbnb-base eslint-plugin-import --save-dev
 code .eslintrc file // this can have whatever you want for linting rules
 {  
-  "extends": "airbnb",
+  "extends": "airbnb-base",
   "root": true,
   "parser": "babel-eslint",
   "rules": {
