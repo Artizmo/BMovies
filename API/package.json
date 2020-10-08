@@ -11,6 +11,14 @@
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.3",
     "nodemon": "^2.0.4"
   },
   "scripts": {
